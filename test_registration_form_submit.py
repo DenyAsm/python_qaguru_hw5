@@ -10,7 +10,7 @@ def test_add_data_registration_and_submit(demo_qa):
     browser.element('#lastName').should(have.attribute('placeholder').value('Last Name')).type('UserLastName')
     browser.element('#userEmail').should(have.attribute('placeholder').value('name@example.com')).type('test.email@gmail.com')
 
-    # Select the male gender
+    # Select the Male gender
     browser.element('label[for="gender-radio-1"]').click()
 
     # Fill in the mobile number field
@@ -49,9 +49,7 @@ def test_add_data_registration_and_submit(demo_qa):
 
     # Finish check URL, the modal title, values and close button
     browser.should(have.url('https://demoqa.com/automation-practice-form/'))
-    browser.element('#example-modal-sizes-title-lg').should(be.visible).should(have.exact_text('Thanks for submitting the form'))
-    #breakpoint()
-
+    browser.element('#example-modal-sizes-title-lg').should(be.visible).should(have.text('Thanks for submitting the form'))
     browser.element('.modal-body').all('tr').should(have.exact_texts
         (
             'Label Values',
@@ -68,7 +66,6 @@ def test_add_data_registration_and_submit(demo_qa):
 
         )
     )
-
     browser.element('#closeLargeModal').should(be.clickable).should(have.text('Close'))
 
 
