@@ -3,7 +3,7 @@ from selene import have, browser
 
 @pytest.fixture(scope = "function")
 def demo_qa():
-    #browser.config.browser_name = 'firefox' # список стандартных driver_name: chrome, firefox, edge, remote, appium
+    #browser.config.driver_name = 'edge' # список стандартных driver_name: chrome, firefox, edge, remote, appium
     browser.driver.maximize_window() # Максимизация окна браузера
     #browser.config.window_width = 1200
     #browser.config.window_height = 800
