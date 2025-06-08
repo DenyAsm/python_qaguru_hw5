@@ -1,7 +1,6 @@
 import pytest
 from selene import have, browser
 
-
 @pytest.fixture(scope = "function")
 def demo_qa():
     #browser.config.browser_name = 'firefox' # список стандартных driver_name: chrome, firefox, edge, remote, appium

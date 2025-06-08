@@ -47,7 +47,7 @@ def test_add_data_registration_and_submit(demo_qa):
     # Submit the form
     browser.element('#submit').should(be.visible and be.clickable and be.enabled).click()
 
-    # Finish check URL, the modal title, values and close button
+    # Finish check URL, modal title, values and close button
     browser.should(have.url('https://demoqa.com/automation-practice-form/'))
     browser.element('#example-modal-sizes-title-lg').should(be.visible).should(have.text('Thanks for submitting the form'))
     browser.element('.modal-body').all('tr').should(have.exact_texts
